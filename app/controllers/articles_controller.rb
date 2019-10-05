@@ -1,4 +1,9 @@
 class ArticlesController < ApplicationController
+   before_action :authenticate_user! 
+
+  def index
+    @articles = current_user.articles
+  end
 
   def new
     @ariticle = Article.new 
@@ -7,6 +12,7 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.new(article_params)
     @article.save!
+    redirect_to articles_path
   end
 
   def show
