@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :articles, only: [:index, :new, :create, :show] do
     resources :comments, only: [:create]
   end
+  namespace :admin do
+    resources :users, only: [:index]
+  end
 end
