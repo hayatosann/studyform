@@ -1,0 +1,27 @@
+<%= form_with model: @article, url: '/articles', local: true do |f| %>
+  <div class="form-group">
+    <%= f.label :study_time %>
+    <%= f.text_field :study_time, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :study_field %>
+    <%= f.text_area :study_field, class: "form-control", rows: 3 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :study_summary %>
+    <%= f.text_area :study_summary, class: "form-control", rows: 5 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :itnews_opinion %>
+    <%= f.text_area :itnews_opinion, class: "form-control", rows: 3 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :consultation %>
+    <%= f.text_area :consultation, class: "form-control", rows: 3 %>
+  </div>
+  <div class="form-group">
+    <%= f.label :sns_links %>
+    <%= f.text_field :sns_links, class: "form-control" %>
+  </div>
+  <%= f.submit class: "btn btn-primary btn-lg mb-2" %>
+<% end %>
