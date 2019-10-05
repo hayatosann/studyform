@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
   end
   namespace :admin do
-    resources :users
+    resources :users, only: [:index]
   end
 end
