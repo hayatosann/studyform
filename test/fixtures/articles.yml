@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  study_time: MyString
+  study_field: MyString
+  study_summary: MyText
+  itnews_opinion: MyText
+  consultation: MyString
+  sns_links: MyString
+
+two:
+  study_time: MyString
+  study_field: MyString
+  study_summary: MyText
+  itnews_opinion: MyText
+  consultation: MyString
+  sns_links: MyString
