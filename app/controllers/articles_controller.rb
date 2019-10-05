@@ -5,9 +5,14 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    binding.pry
     @article = current_user.articles.new(article_params)
     @article.save!
+  end
+
+  def show
+    @article = Article.find(params[:id])
+    @comment = Comment.new
+    @comments = Comment.where(article_id: params[:id])
   end
 
   private
