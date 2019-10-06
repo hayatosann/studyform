@@ -12,16 +12,20 @@ Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
 # Environment construction procedure manual(環境構築手順書)
 
 - 1.Open your PC browser with Google chrome
-- 2.heroku_url(plan to deplopy)
+- 2.Access heroku_url(https://studyform.herokuapp.com/)
 - 3.Sing_up
   - admin user
     - email:test@gmail.com
     - password:testtest
     - name:Mike
-  - students
+  - students1
     - email:test2@gmail.com
     - password:testtest2
     - name:Tarou
+  - students2
+    - email:test3@gmail.com
+    - password:testtest3
+    - name:Hanako
 - 4.How to use
 Please refer to the attached documnet(Transition diagram).
   - `https://github.com/hayatosann/studyform/issues/11`
