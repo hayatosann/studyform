@@ -5,11 +5,47 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background:gray;">
+      <a class="navbar-brand" href="#">StudyForm</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <% if current_user.try(:admin?) %>
+              <a class="nav-link" href="/admin/users">Home <span class="sr-only">(current)</span></a>
+            <%else%> 
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <%end%>  
+          </li>
+          <% if user_signed_in?%>
+          <li class="nav-item">
+            <%=link_to 'Log_out',destroy_user_session_path, class: "nav-link", method: :delete %>
+          </li>
+          <%else%>
+            <a class="nav-link" href="/users/sign_in">Log_in <span class="sr-only">(current)</span></a>
+          <%end%>
+          <%if user_signed_in?%>
+            <% if current_user.try(:admin?) %>
+            <%else%>
+              <a class="nav-link" href="/users/<%=current_user.id%>">My_articles <span class="sr-only">(current)</span></a>
+            <%end%>
+          <%else%>
+          <%end%>
+
+      </div>
+    </nav>
+    <div class="adjustbox" style='padding: 20px 50px;'>
+      <%= yield %>
+    </div>
   </body>
 </html>
