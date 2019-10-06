@@ -3,8 +3,24 @@
 `https://github.com/hayatosann/studyform/issues/11`
 # Environment construction procedure manual(環境構築手順書)
 
+- 1.Open your PC browser with Google chrome
+- 2.heroku_url(plan to deplopy)
+- 3.Sing_up
+  - admin user
+    - email:test@gmail.com
+    - password:testtest
+    - name:Mike
+  - students
+    - email:test2@gmail.com
+    - password:testtest2
+    - name:Tarou
+- 4.How to use
+Please refer to the attached documnet(Transition diagram).
+  - `https://github.com/hayatosann/studyform/issues/11`
 
 # DB
+## ER diagram
+[erd.pdf](https://github.com/hayatosann/studyform/files/3693831/erd.pdf)
 ## articles table
 
 |Column|Type|Options|
