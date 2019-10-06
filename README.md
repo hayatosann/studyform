@@ -27,10 +27,10 @@ Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
     - password:testtest3
     - name:Hanako
 - 4.How to use
-Please refer to the attached documnet(Transition diagram).
-  - `https://github.com/hayatosann/studyform/issues/11`
+  - Please refer to the attached documnet(Transition diagram).
+    - `https://github.com/hayatosann/studyform/issues/11`
 
-# DB
+# DB　design
 ## ER diagram
 [erd.pdf](https://github.com/hayatosann/studyform/files/3693831/erd.pdf)
 ## articles table
@@ -78,3 +78,4 @@ Please refer to the attached documnet(Transition diagram).
 - has_many :comments
 - has_many :articles
 
+# Afterword
