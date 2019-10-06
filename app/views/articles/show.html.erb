@@ -1,30 +1,51 @@
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th>Item</th>
-      <th>Detail</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Study_time</td><td class="text-nowrap"><%=@article.study_time%></td></tr>
-    <tr><td>Study_summary</td><td><%=@article.study_summary%></td></tr>
-    <tr><td>itnews_opinion</td><td><%=@article.itnews_opinion%></td></tr>
-    <tr><td>consultation</td><td><%=@article.consultation%></td></tr>
-    <tr><td>sns_links</td><td><%=@article.sns_links%></td></tr>
-  </tbody>
-</table>
+<div class="border">
+  <table class="table">
+    <thead class="thead">
+      <tr>
+        <th>Item</th>
+        <th>Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Study_time</td><td class="text-nowrap"><%=@article.study_time%></td></tr>
+      <tr><td>Study_summary</td><td><%=@article.study_summary%></td></tr>
+      <tr><td>itnews_opinion</td><td><%=@article.itnews_opinion%></td></tr>
+      <tr><td>consultation</td><td><%=@article.consultation%></td></tr>
+      <tr><td>sns_links</td><td><%=@article.sns_links%></td></tr>
+    </tbody>
+  </table>
+</div>
 
-<%= form_with model: @comment, url: "/articles/#{params[:id]}/comments", local: true do |f| %>
-  <div class="form-group">
-    <%= f.label :comment %>
-    <%= f.text_area :comment, class: "form-control" %>
-  </div>
-<%= f.submit class: "btn btn-primary btn-lg mb-2" %>
+<%if current_user.admin == 1%>
+  <%= form_with model: @comment, url: "/articles/#{params[:id]}/comments", local: true do |f| %>
+    <div class="form-group">
+      <%= f.label :comment %>
+      <%= f.text_area :comment, class: "form-control" %>
+    </div>
+  <%= f.submit class: "btn btn-primary btn-lg mb-2" %>
+  <%end%>
+<%else%>
 <%end%>
 
 <%@comments.each do |comment|%>
-  <p><%=comment.comment%></p>
-  <p><%=comment.user.email%>
-  <p><%=comment.created_at.strftime('%F %T')%>
-  
+  <div class="card" style="width: 20rem; margin:0 auto; margin-bottom:20px; background-color:transparent">
+    <p style="font-size:20px; color:white; padding-left:20px;"></p>
+    <table class="table">
+      <tbody>
+          <tr>
+              <th>Name</th>
+              <td><%=comment.user.name%></td>
+          </tr>
+          <tr>
+              <th>Comment</th>
+              <td><%=comment.comment%></td>
+              
+          </tr>
+          <tr>
+              <th>Time</th>
+              <td><%=comment.created_at.strftime('%F %T')%></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
 <%end%>
