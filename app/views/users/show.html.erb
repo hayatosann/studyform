@@ -1,0 +1,25 @@
+<%@articles.each do |article|%>  
+<div class="border" style="margin-bottom:10px;">
+  <table class="table">
+    <thead class="thead">
+      <tr>
+        <th>Item</th>
+        <th>Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Date</td><td class="text-nowrap"><%=article.created_at.strftime('%F')%></td></tr>
+      <tr><td>Study_time</td><td class="text-nowrap"><%=article.study_time%></td></tr>
+      <tr><td>Study_summary</td><td><%=article.study_summary%></td></tr>
+      <tr><td>ITNews_Your_opinion</td><td><%=article.itnews_opinion%></td></tr>
+      <tr><td>Consultation</td><td><%=article.consultation%></td></tr>
+      <tr><td>SNS_YourOutputLink</td><td><%=article.sns_links%></td></tr>
+      <%if current_user.admin == 1%>
+      <tr><td><a href="/articles/<%=article.id%>" class="btn btn-primary btn-lg btn-block" role="button">Comment</a></td><td>  
+      <%else%>
+      <tr><td><a href="/articles/<%=article.id%>" class="btn btn-primary btn-lg btn-block" role="button">Show</a></td><td> 
+      <%end%>    
+    </tbody>
+  </table>
+</div>
+<%end%>

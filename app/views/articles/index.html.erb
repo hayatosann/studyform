@@ -1,17 +1,19 @@
 <%@articles.each do |article|%>  
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th>Item</th>
-        <th>Detail</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Study_time</td><td class="text-nowrap"><%=article.study_time%></td></tr>
-      <tr><td>Study_summary</td><td><%=article.study_summary%></td></tr>
-      <tr><td>itnews_opinion</td><td><%=article.itnews_opinion%></td></tr>
-      <tr><td>consultation</td><td><%=article.consultation%></td></tr>
-      <tr><td>sns_links</td><td><%=article.sns_links%></td></tr>
-    </tbody>
-  </table>
+  <div class="border" style="margin-bottom:10px;">
+    <table class="table">
+      <thead class="thead">
+        <tr>
+          <th>Item</th>
+          <th>Detail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Study_time</td><td class="text-nowrap"><%=article.study_time%></td></tr>
+        <tr><td>Study_summary</td><td><%=article.study_summary%></td></tr>
+        <tr><td>itnews_opinion</td><td><%=article.itnews_opinion%></td></tr>
+        <tr><td>consultation</td><td><%=article.consultation%></td></tr>
+        <tr><td>sns_links</td><td><%=article.sns_links%></td></tr>
+      </tbody>
+    </table>
+  </div>
 <%end%>
