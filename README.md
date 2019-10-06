@@ -1,6 +1,12 @@
 # StudyForm
 ## Document
 `https://github.com/hayatosann/studyform/issues/11`
+## Development environment
+- governing language:ruby(2.5.1p57)
+- governing framework:ruby(5.2.3)
+- brew:Homebrew 2.1.11
+- database:mysql
+Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
 # Environment construction procedure manual(環境構築手順書)
 
 - 1.Open your PC browser with Google chrome
