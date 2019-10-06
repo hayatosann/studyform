@@ -1,24 +1,52 @@
-# README
+# StudyForm
+## Document
+`https://github.com/hayatosann/studyform/issues/11`
+# Environment construction procedure manual(環境構築手順書)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# DB
+## articles table
 
-* Ruby version
+|Column|Type|Options|
+|------|----|-------|
+|study_time|string||
+|study_field|string||
+|study_summary|text||
+|itnews_opinion|text||
+|consultation|string||
+|sns_links|string||
+|user_id|references|null: false, foreign_key: true|
 
-* System dependencies
+### Association
+- belongs_to :user
+- has_many :comments
 
-* Configuration
+## comments table
 
-* Database creation
+|Column|Type|Options|
+|------|----|-------|
+|comment|text||
+|user_id|references|null: false, foreign_key: true|
+|article_id|references|null: false, foreign_key: true|
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- belongs_to :article
+- belongs_to :user
 
-* Services (job queues, cache servers, search engines, etc.)
+## usersテーブル
 
-* Deployment instructions
+|Column|Type|Options|
+|------|----|-------|
+|email|string||
+|password|string||
+|password_confirmation|string||
+|name|string||
+|admin|integer||
+  
 
-* ...
+### Association
+
+- has_many :comments
+- has_many :articles
+
