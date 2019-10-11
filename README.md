@@ -9,7 +9,7 @@
 - brew:Homebrew 2.1.11
 - database:mysql
 Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
-# Environment construction procedure manual(環境構築手順書)
+# Environment construction procedure manual
 
 - 1.Open your PC browser with Google chrome
 - 2.Access heroku_url(https://studyform.herokuapp.com/)
@@ -29,6 +29,7 @@ Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
 - 4.How to use
   - Please refer to the attached documnet(Transition diagram).
     - `https://github.com/hayatosann/studyform/issues/11`
+    
 
 # DB　design
 ## ER diagram
@@ -62,7 +63,7 @@ Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
 - belongs_to :article
 - belongs_to :user
 
-## usersテーブル
+## users table
 
 |Column|Type|Options|
 |------|----|-------|
@@ -79,3 +80,15 @@ Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
 - has_many :articles
 
 # Afterword
+I made this application in a fixed time(12 hours).At first I planed what to make & how to make.I supposed I work for one company which provide users teaching programming skills.I have to bring profit,and increase customer satisfaction.I focused on the relation between teachers and users,and increasement user's skill. I thought they leads to increase customer's(user's) satisfaction.
+To make this application,I use Ruby on Rails.I reviewed minimum implemation tasks in order to make this application.
+ - Requirementation(function)
+  - form
+  - comments
+  - admin
+  - students (users)
+  - mobile responsive
+  
+I was able to manage to make above minimum implementations in a limitted time.but I can't use javascript.I'm sorry about　this.
+
+
