@@ -29,6 +29,7 @@ Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
 - 4.How to use
   - Please refer to the attached documnet(Transition diagram).
     - `https://github.com/hayatosann/studyform/issues/11`
+      - [StudyForm.pdf](https://github.com/hayatosann/studyform/files/3693834/StudyForm.pdf)
     
 
 # DB　design
@@ -89,6 +90,6 @@ To make this application,I use Ruby on Rails.I reviewed minimum implemation task
   - students (users)
   - mobile responsive
   
-I was able to manage to make above minimum implementations in a limitted time.but I can't use javascript.I'm sorry about　this.
+I was able to manage to make above minimum implementations in a limitted time.but I can't use javascript.I'm sorry about this.
 
 
