@@ -88,7 +88,7 @@ To make this application,I use Ruby on Rails.I reviewed minimum implemation task
   - comments
   - admin
   - students (users)
-  - mobile responsive
+  - mobile phone responsive
   
 I was able to manage to make above minimum implementations in a limitted time.but I can't use javascript.I'm sorry about this.
 
