@@ -66,6 +66,7 @@ Homebrew/homebrew-core (git revision 92c329; last commit 2019-10-04)
 
 ## users table
 
+
 |Column|Type|Options|
 |------|----|-------|
 |email|string||
